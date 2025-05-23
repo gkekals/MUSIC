@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나만의 밴드 구성하기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="index.html" class="home-link">홈으로</a>
+  </nav>
+  <main class="band-main">
+    <form class="band-form">
+      <h2>밴드 이름을 정해주세요</h2>
+      <input type="text" class="band-name-input" name="bandname" placeholder="예: 반개 밴드" required />
+      <div class="form-section">
+        <label class="form-label">악기를 선택하세요 (중복 가능)</label>
+        <div class="instrument-checkboxes">
+          <label><input type="checkbox" name="instrument" value="피아노" /> 🎹 피아노</label>
+          <label><input type="checkbox" name="instrument" value="기타" /> 🎸 기타</label>
+          <label><input type="checkbox" name="instrument" value="드럼" /> 🥁 드럼</label>
+          <label><input type="checkbox" name="instrument" value="보컬" /> 🎤 보컬</label>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">밴드 구성 완료</button>
+    </form>
+    <div class="button-container">
+      <a href="index.html" class="band-button home-btn">홈으로 돌아가기</a>
+    </div>
+  </main>
+</body>
+</html>
