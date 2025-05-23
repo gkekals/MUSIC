@@ -1,0 +1,393 @@
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  background: #18181b;
+  color: #222;
+}
+
+/* 헤더 */
+header {
+  text-align: center;
+  background: #1e293b;
+  color: white;
+  padding: 2rem 1rem 1.5rem 1rem;
+}
+
+/* 메인 그리드 */
+.instruments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  padding: 2.5rem 2rem 1rem 2rem;
+}
+
+/* 카드 디자인 */
+.instrument-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  min-height: 430px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.instrument-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+}
+
+/* 이미지가 카드 상단에 딱 맞게 */
+.instrument-img {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* 카드 내 텍스트 */
+.card-text {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+.instrument-card h2 {
+  margin: 0.4rem 0 0.6rem 0;
+  font-size: 1.25rem;
+  color: #222;
+}
+.instrument-card p {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* 버튼 */
+.button-container {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem 0;
+}
+.band-button {
+  padding: 1rem 2.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(59,130,246,0.18);
+  transition: background-color 0.2s, box-shadow 0.2s;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.band-button:hover {
+  background-color: #2563eb;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.25);
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #18181b;
+  color: #aaa;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* 반응형 */
+@media (max-width: 800px) {
+  .instruments {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+  }
+  .instrument-card {
+    min-height: 350px;
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .instrument-img {
+    max-width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .instruments {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .instrument-card {
+    min-height: 260px;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .instrument-img {
+    max-width: 90px;
+    height: 90px;
+  }
+}
+
+.nav-btn {
+  padding: 0.5rem 1.2rem;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  margin: 0 0.2rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.nav-btn:hover {
+  background: #2563eb;
+}
+.band-button.home-btn {
+  margin-top: 1.5rem;
+}
+.auth-form {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: white;
+  color: #222;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.auth-form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.auth-form input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.auth-form button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.auth-form button:hover {
+  background: #2563eb;
+}
+.band-button.home-btn {
+  margin-top: 1.5rem;
+}
+.band-main {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #18181b;
+}
+
+.band-form {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 41, 138, 0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.band-form h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  color: #222;
+  text-align: left;
+}
+
+.band-name-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid #d2d6dc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background: #f7fafc;
+}
+
+.form-section {
+  margin-bottom: 0.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.instrument-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-left: 0.2rem;
+}
+
+.instrument-checkboxes label {
+  font-size: 1.05rem;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.submit-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.95rem 0;
+  background: #19398a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #10245c;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.nav-btn.prev-btn {
+  padding: 1rem 2rem;
+  background-color: #232b37;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(30,41,138,0.08);
+}
+
+.nav-btn.prev-btn:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.band-button.home-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1.2rem;
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+.instrument-card {
+  text-decoration: none;
+  color: inherit;
+}
+.instrument-card:visited {
+  color: inherit;
+}
+
+.instrument-detail img,
+.detail-img {
+  max-width: 160px;
+  max-height: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.2rem auto;
+}
+
+.choice-card img {
+  max-width: 120px;
+  max-height: 120px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.2rem auto;
+  object-fit: contain;
+}
+.choice-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+
+.choice-card {
+  background: #232b37;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(30,41,138,0.08);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  min-width: 180px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.band-button {
+  min-width: 120px;
+  max-width: 200px;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.instrument-detail h2,
+.instrument-detail p {
+  color: #fff;
+}
+.genre-video-section {
+  margin: 2.5rem auto 1.5rem auto;
+  padding: 2rem 0 1.5rem 0;
+  text-align: center;
+  background: none;
+}
+
+.genre-video-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
